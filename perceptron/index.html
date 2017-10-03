@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="plot"></div>
+
+    <div class="controls">
+      <form name="controls">
+        <p>
+          Red means -1<br/>
+          Blue means 1
+        </p>
+        <p>
+          <label for="equation">
+            Linear Equation:
+          </label>
+          <input id="equation" name="equation" type="text" value="2x+1" />
+          <button id="btn-load-equation" type="button">Load and Train</button>
+        </p>
+        <p>
+          <button id="btn-random-x-y" type="button">Random values</button>
+          <label for="x">x:&nbsp;</label>
+          <input type="text" id="x" name="x" />
+          &nbsp;&nbsp;&nbsp;
+          <label for="y">y:&nbsp;</label>
+          <input type="text" id="y" name="y" />
+          <button id="btn-guess" type="button">Guess</button>
+        </p>
+        <p>
+          <button id="btn-random-input" type="button">Predict Random data set to Guess</button>
+        </p>
+      </form>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.16.3/math.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://wzrd.in/standalone/function-plot@1.14.0"></script>
+
+    <script src="perceptron.js"></script>
+    <script src="plot.js"></script>
+  </body>
+</html>
