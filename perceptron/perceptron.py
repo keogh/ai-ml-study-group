@@ -54,8 +54,6 @@ for item in iris_2:
     n+=1
 random.shuffle(training_data_iris)
 random.shuffle(validation_data_iris)
-# print(validation_data_iris)
-# exit()
 
 training_data = training_data_iris
 validation_data = validation_data_iris
@@ -71,10 +69,6 @@ for i in range(n):
     error = expected - unit_step(result)
     errors.append(error)
     w += eta * error * x
-
-# for x, _ in training_data:
-#     result = dot(x, w)
-#     print("{}: {} -> {}".format(x[:2], result, unit_step(result)))
 
 dots_red = [];
 dots_blue = [];
