@@ -3,7 +3,7 @@ from numpy import array, dot, random, genfromtxt, append
 from pylab import plot, ylim, show
 import matplotlib.pyplot as plt
 
-unit_step = lambda x: 0 if x < 0 else 1
+unit_step = lambda x: 1 if x >= 0 else -1
 
 training_data_OR = [
     (array([0,0,1]), 0),
@@ -41,9 +41,9 @@ validation_data_iris=[]
 n = 0
 for item in iris_1:
     if n > 35:
-        validation_data_iris.append([append(item, [1], axis=1), 0])
+        validation_data_iris.append([append(item, [1], axis=1), -1])
     else:
-        training_data_iris.append([append(item, [1], axis=1), 0])
+        training_data_iris.append([append(item, [1], axis=1), -1])
     n+=1
 n = 0
 for item in iris_2:
