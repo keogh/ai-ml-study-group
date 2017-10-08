@@ -12,7 +12,8 @@ training_data_OR = [
     (array([1,1,1]), 1),
 ]
 
-training_data_AND = [ (array([0,0,1]), 0),
+training_data_AND = [
+    (array([0,0,1]), 0),
     (array([0,1,1]), 0),
     (array([1,0,1]), 0),
     (array([1,1,1]), 1),
